@@ -1,0 +1,36 @@
+Time resolution is 1 ps
+
+tb_tx_stream_composer, stage 2 verification
+
+test 1: 16 ct bytes (1 block), 44 bytes total
+    PASS: output 44 bytes (expected 44)
+    PASS: payloadLen = 44
+    test 1 complete
+
+test 2: 1 ct byte, 29 bytes total
+
+tb_tx_stream_composer, stage 2 verification
+
+test 1: 16 ct bytes (1 block), 44 bytes total
+    PASS: output 44 bytes (expected 44)
+    PASS: payloadLen = 44
+    test 1 complete
+
+test 2: 1 ct byte, 29 bytes total
+    PASS: output 29 bytes (expected 29)
+    PASS: payloadLen = 29
+    test 2 complete
+
+test 3: 64 ct bytes (4 blocks), 92 bytes total
+    PASS: output 92 bytes (expected 92)
+    PASS: payloadLen = 92
+    test 3 complete
+
+test 4: backpressure during iv and tag output
+    PASS: output 44 bytes with backpressure (expected 44)
+    test 4 complete
+
+summary: 370 passed, 0 failed out of 370 tests
+ALL TESTS PASSED
+
+$finish called at time : 8525 ns : File "C:/Users/Robert Stacy Lois II/Desktop/aes-256-gcm/wrapper2/tx-stream-composer/tx-stream-composer/tx-stream-composer.srcs/sim_1/imports/tx-stream-composer/tb_tx_stream_composer.v" Line 501
