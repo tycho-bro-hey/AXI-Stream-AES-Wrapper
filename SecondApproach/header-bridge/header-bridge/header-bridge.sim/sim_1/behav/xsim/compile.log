@@ -1,0 +1,4 @@
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Robert Stacy Lois II/Desktop/aes-256-gcm/wrapper2/header-bridge/header-bridge/header-bridge.srcs/sources_1/imports/header-bridge/tx_header_bridge.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tx_header_bridge
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Robert Stacy Lois II/Desktop/aes-256-gcm/wrapper2/header-bridge/header-bridge/header-bridge.srcs/sim_1/imports/header-bridge/tb_tx_header_bridge.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb_tx_header_bridge

@@ -1,0 +1,323 @@
+
+*** Running vivado
+    with args -log axis_downsizer.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source axis_downsizer.tcl
+
+
+
+****** Vivado v2025.2 (64-bit)
+  **** SW Build 6299465 on Fri Nov 14 19:35:11 GMT 2025
+  **** IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
+  **** SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
+  **** Start of session at: Thu Apr  2 14:31:54 2026
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+
+source axis_downsizer.tcl -notrace
+Command: synth_design -top axis_downsizer -part xc7a100tcsg324-1 -incremental_mode off -mode out_of_context
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a100t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a100t'
+INFO: [Device 21-403] Loading part xc7a100tcsg324-1
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 39848
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 1280.977 ; gain = 541.121
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'axis_downsizer' [c:/Users/Robert Stacy Lois II/Desktop/aes-256-gcm/wrapper2/top-level-test/top-level-test/top-level-test.gen/sources_1/ip/axis_downsizer/synth/axis_downsizer.v:53]
+INFO: [Synth 8-6157] synthesizing module 'axis_dwidth_converter_v1_1_34_axis_dwidth_converter' [c:/Users/Robert Stacy Lois II/Desktop/aes-256-gcm/wrapper2/top-level-test/top-level-test/top-level-test.gen/sources_1/ip/axis_downsizer/hdl/axis_dwidth_converter_v1_1_vl_rfs.v:814]
+INFO: [Synth 8-6157] synthesizing module 'axis_dwidth_converter_v1_1_34_axisc_downsizer' [c:/Users/Robert Stacy Lois II/Desktop/aes-256-gcm/wrapper2/top-level-test/top-level-test/top-level-test.gen/sources_1/ip/axis_downsizer/hdl/axis_dwidth_converter_v1_1_vl_rfs.v:60]
+INFO: [Synth 8-6155] done synthesizing module 'axis_dwidth_converter_v1_1_34_axisc_downsizer' (0#1) [c:/Users/Robert Stacy Lois II/Desktop/aes-256-gcm/wrapper2/top-level-test/top-level-test/top-level-test.gen/sources_1/ip/axis_downsizer/hdl/axis_dwidth_converter_v1_1_vl_rfs.v:60]
+INFO: [Synth 8-6157] synthesizing module 'axis_register_slice_v1_1_35_axis_register_slice' [c:/Users/Robert Stacy Lois II/Desktop/aes-256-gcm/wrapper2/top-level-test/top-level-test/top-level-test.gen/sources_1/ip/axis_downsizer/hdl/axis_register_slice_v1_1_vl_rfs.v:2830]
+INFO: [Synth 8-6157] synthesizing module 'axis_infrastructure_v1_1_1_util_axis2vector' [c:/Users/Robert Stacy Lois II/Desktop/aes-256-gcm/wrapper2/top-level-test/top-level-test/top-level-test.gen/sources_1/ip/axis_downsizer/hdl/axis_infrastructure_v1_1_vl_rfs.v:805]
+INFO: [Synth 8-6155] done synthesizing module 'axis_infrastructure_v1_1_1_util_axis2vector' (0#1) [c:/Users/Robert Stacy Lois II/Desktop/aes-256-gcm/wrapper2/top-level-test/top-level-test/top-level-test.gen/sources_1/ip/axis_downsizer/hdl/axis_infrastructure_v1_1_vl_rfs.v:805]
+INFO: [Synth 8-6157] synthesizing module 'axis_register_slice_v1_1_35_axisc_register_slice' [c:/Users/Robert Stacy Lois II/Desktop/aes-256-gcm/wrapper2/top-level-test/top-level-test/top-level-test.gen/sources_1/ip/axis_downsizer/hdl/axis_register_slice_v1_1_vl_rfs.v:1929]
+INFO: [Synth 8-6155] done synthesizing module 'axis_register_slice_v1_1_35_axisc_register_slice' (0#1) [c:/Users/Robert Stacy Lois II/Desktop/aes-256-gcm/wrapper2/top-level-test/top-level-test/top-level-test.gen/sources_1/ip/axis_downsizer/hdl/axis_register_slice_v1_1_vl_rfs.v:1929]
+INFO: [Synth 8-6157] synthesizing module 'axis_infrastructure_v1_1_1_util_vector2axis' [c:/Users/Robert Stacy Lois II/Desktop/aes-256-gcm/wrapper2/top-level-test/top-level-test/top-level-test.gen/sources_1/ip/axis_downsizer/hdl/axis_infrastructure_v1_1_vl_rfs.v:986]
+INFO: [Synth 8-6155] done synthesizing module 'axis_infrastructure_v1_1_1_util_vector2axis' (0#1) [c:/Users/Robert Stacy Lois II/Desktop/aes-256-gcm/wrapper2/top-level-test/top-level-test/top-level-test.gen/sources_1/ip/axis_downsizer/hdl/axis_infrastructure_v1_1_vl_rfs.v:986]
+INFO: [Synth 8-6155] done synthesizing module 'axis_register_slice_v1_1_35_axis_register_slice' (0#1) [c:/Users/Robert Stacy Lois II/Desktop/aes-256-gcm/wrapper2/top-level-test/top-level-test/top-level-test.gen/sources_1/ip/axis_downsizer/hdl/axis_register_slice_v1_1_vl_rfs.v:2830]
+INFO: [Synth 8-6157] synthesizing module 'axis_register_slice_v1_1_35_axis_register_slice__parameterized0' [c:/Users/Robert Stacy Lois II/Desktop/aes-256-gcm/wrapper2/top-level-test/top-level-test/top-level-test.gen/sources_1/ip/axis_downsizer/hdl/axis_register_slice_v1_1_vl_rfs.v:2830]
+INFO: [Synth 8-6157] synthesizing module 'axis_infrastructure_v1_1_1_util_axis2vector__parameterized0' [c:/Users/Robert Stacy Lois II/Desktop/aes-256-gcm/wrapper2/top-level-test/top-level-test/top-level-test.gen/sources_1/ip/axis_downsizer/hdl/axis_infrastructure_v1_1_vl_rfs.v:805]
+INFO: [Synth 8-6155] done synthesizing module 'axis_infrastructure_v1_1_1_util_axis2vector__parameterized0' (0#1) [c:/Users/Robert Stacy Lois II/Desktop/aes-256-gcm/wrapper2/top-level-test/top-level-test/top-level-test.gen/sources_1/ip/axis_downsizer/hdl/axis_infrastructure_v1_1_vl_rfs.v:805]
+INFO: [Synth 8-6157] synthesizing module 'axis_register_slice_v1_1_35_axisc_register_slice__parameterized0' [c:/Users/Robert Stacy Lois II/Desktop/aes-256-gcm/wrapper2/top-level-test/top-level-test/top-level-test.gen/sources_1/ip/axis_downsizer/hdl/axis_register_slice_v1_1_vl_rfs.v:1929]
+INFO: [Synth 8-6155] done synthesizing module 'axis_register_slice_v1_1_35_axisc_register_slice__parameterized0' (0#1) [c:/Users/Robert Stacy Lois II/Desktop/aes-256-gcm/wrapper2/top-level-test/top-level-test/top-level-test.gen/sources_1/ip/axis_downsizer/hdl/axis_register_slice_v1_1_vl_rfs.v:1929]
+INFO: [Synth 8-6157] synthesizing module 'axis_infrastructure_v1_1_1_util_vector2axis__parameterized0' [c:/Users/Robert Stacy Lois II/Desktop/aes-256-gcm/wrapper2/top-level-test/top-level-test/top-level-test.gen/sources_1/ip/axis_downsizer/hdl/axis_infrastructure_v1_1_vl_rfs.v:986]
+INFO: [Synth 8-6155] done synthesizing module 'axis_infrastructure_v1_1_1_util_vector2axis__parameterized0' (0#1) [c:/Users/Robert Stacy Lois II/Desktop/aes-256-gcm/wrapper2/top-level-test/top-level-test/top-level-test.gen/sources_1/ip/axis_downsizer/hdl/axis_infrastructure_v1_1_vl_rfs.v:986]
+INFO: [Synth 8-6155] done synthesizing module 'axis_register_slice_v1_1_35_axis_register_slice__parameterized0' (0#1) [c:/Users/Robert Stacy Lois II/Desktop/aes-256-gcm/wrapper2/top-level-test/top-level-test/top-level-test.gen/sources_1/ip/axis_downsizer/hdl/axis_register_slice_v1_1_vl_rfs.v:2830]
+INFO: [Synth 8-6155] done synthesizing module 'axis_dwidth_converter_v1_1_34_axis_dwidth_converter' (0#1) [c:/Users/Robert Stacy Lois II/Desktop/aes-256-gcm/wrapper2/top-level-test/top-level-test/top-level-test.gen/sources_1/ip/axis_downsizer/hdl/axis_dwidth_converter_v1_1_vl_rfs.v:814]
+INFO: [Synth 8-6155] done synthesizing module 'axis_downsizer' (0#1) [c:/Users/Robert Stacy Lois II/Desktop/aes-256-gcm/wrapper2/top-level-test/top-level-test/top-level-test.gen/sources_1/ip/axis_downsizer/synth/axis_downsizer.v:53]
+INFO: [Synth 8-4490] FSM extraction disabled for register 'state_reg' through user attribute
+INFO: [Synth 8-7129] Port ACLK in module axis_register_slice_v1_1_35_axisc_register_slice__parameterized0 is either unconnected or has no load
+INFO: [Synth 8-7129] Port ACLK2X in module axis_register_slice_v1_1_35_axisc_register_slice__parameterized0 is either unconnected or has no load
+INFO: [Synth 8-7129] Port ARESET in module axis_register_slice_v1_1_35_axisc_register_slice__parameterized0 is either unconnected or has no load
+INFO: [Synth 8-7129] Port ACLKEN in module axis_register_slice_v1_1_35_axisc_register_slice__parameterized0 is either unconnected or has no load
+INFO: [Synth 8-7129] Port TSTRB[0] in module axis_infrastructure_v1_1_1_util_axis2vector__parameterized0 is either unconnected or has no load
+INFO: [Synth 8-7129] Port TID[0] in module axis_infrastructure_v1_1_1_util_axis2vector__parameterized0 is either unconnected or has no load
+INFO: [Synth 8-7129] Port TDEST[0] in module axis_infrastructure_v1_1_1_util_axis2vector__parameterized0 is either unconnected or has no load
+INFO: [Synth 8-7129] Port TUSER[0] in module axis_infrastructure_v1_1_1_util_axis2vector__parameterized0 is either unconnected or has no load
+INFO: [Synth 8-7129] Port ACLK in module axis_register_slice_v1_1_35_axisc_register_slice is either unconnected or has no load
+INFO: [Synth 8-7129] Port ACLK2X in module axis_register_slice_v1_1_35_axisc_register_slice is either unconnected or has no load
+INFO: [Synth 8-7129] Port ARESET in module axis_register_slice_v1_1_35_axisc_register_slice is either unconnected or has no load
+INFO: [Synth 8-7129] Port ACLKEN in module axis_register_slice_v1_1_35_axisc_register_slice is either unconnected or has no load
+INFO: [Synth 8-7129] Port TSTRB[15] in module axis_infrastructure_v1_1_1_util_axis2vector is either unconnected or has no load
+INFO: [Synth 8-7129] Port TSTRB[14] in module axis_infrastructure_v1_1_1_util_axis2vector is either unconnected or has no load
+INFO: [Synth 8-7129] Port TSTRB[13] in module axis_infrastructure_v1_1_1_util_axis2vector is either unconnected or has no load
+INFO: [Synth 8-7129] Port TSTRB[12] in module axis_infrastructure_v1_1_1_util_axis2vector is either unconnected or has no load
+INFO: [Synth 8-7129] Port TSTRB[11] in module axis_infrastructure_v1_1_1_util_axis2vector is either unconnected or has no load
+INFO: [Synth 8-7129] Port TSTRB[10] in module axis_infrastructure_v1_1_1_util_axis2vector is either unconnected or has no load
+INFO: [Synth 8-7129] Port TSTRB[9] in module axis_infrastructure_v1_1_1_util_axis2vector is either unconnected or has no load
+INFO: [Synth 8-7129] Port TSTRB[8] in module axis_infrastructure_v1_1_1_util_axis2vector is either unconnected or has no load
+INFO: [Synth 8-7129] Port TSTRB[7] in module axis_infrastructure_v1_1_1_util_axis2vector is either unconnected or has no load
+INFO: [Synth 8-7129] Port TSTRB[6] in module axis_infrastructure_v1_1_1_util_axis2vector is either unconnected or has no load
+INFO: [Synth 8-7129] Port TSTRB[5] in module axis_infrastructure_v1_1_1_util_axis2vector is either unconnected or has no load
+INFO: [Synth 8-7129] Port TSTRB[4] in module axis_infrastructure_v1_1_1_util_axis2vector is either unconnected or has no load
+INFO: [Synth 8-7129] Port TSTRB[3] in module axis_infrastructure_v1_1_1_util_axis2vector is either unconnected or has no load
+INFO: [Synth 8-7129] Port TSTRB[2] in module axis_infrastructure_v1_1_1_util_axis2vector is either unconnected or has no load
+INFO: [Synth 8-7129] Port TSTRB[1] in module axis_infrastructure_v1_1_1_util_axis2vector is either unconnected or has no load
+INFO: [Synth 8-7129] Port TSTRB[0] in module axis_infrastructure_v1_1_1_util_axis2vector is either unconnected or has no load
+INFO: [Synth 8-7129] Port TID[0] in module axis_infrastructure_v1_1_1_util_axis2vector is either unconnected or has no load
+INFO: [Synth 8-7129] Port TDEST[0] in module axis_infrastructure_v1_1_1_util_axis2vector is either unconnected or has no load
+INFO: [Synth 8-7129] Port TUSER[15] in module axis_infrastructure_v1_1_1_util_axis2vector is either unconnected or has no load
+INFO: [Synth 8-7129] Port TUSER[14] in module axis_infrastructure_v1_1_1_util_axis2vector is either unconnected or has no load
+INFO: [Synth 8-7129] Port TUSER[13] in module axis_infrastructure_v1_1_1_util_axis2vector is either unconnected or has no load
+INFO: [Synth 8-7129] Port TUSER[12] in module axis_infrastructure_v1_1_1_util_axis2vector is either unconnected or has no load
+INFO: [Synth 8-7129] Port TUSER[11] in module axis_infrastructure_v1_1_1_util_axis2vector is either unconnected or has no load
+INFO: [Synth 8-7129] Port TUSER[10] in module axis_infrastructure_v1_1_1_util_axis2vector is either unconnected or has no load
+INFO: [Synth 8-7129] Port TUSER[9] in module axis_infrastructure_v1_1_1_util_axis2vector is either unconnected or has no load
+INFO: [Synth 8-7129] Port TUSER[8] in module axis_infrastructure_v1_1_1_util_axis2vector is either unconnected or has no load
+INFO: [Synth 8-7129] Port TUSER[7] in module axis_infrastructure_v1_1_1_util_axis2vector is either unconnected or has no load
+INFO: [Synth 8-7129] Port TUSER[6] in module axis_infrastructure_v1_1_1_util_axis2vector is either unconnected or has no load
+INFO: [Synth 8-7129] Port TUSER[5] in module axis_infrastructure_v1_1_1_util_axis2vector is either unconnected or has no load
+INFO: [Synth 8-7129] Port TUSER[4] in module axis_infrastructure_v1_1_1_util_axis2vector is either unconnected or has no load
+INFO: [Synth 8-7129] Port TUSER[3] in module axis_infrastructure_v1_1_1_util_axis2vector is either unconnected or has no load
+INFO: [Synth 8-7129] Port TUSER[2] in module axis_infrastructure_v1_1_1_util_axis2vector is either unconnected or has no load
+INFO: [Synth 8-7129] Port TUSER[1] in module axis_infrastructure_v1_1_1_util_axis2vector is either unconnected or has no load
+INFO: [Synth 8-7129] Port TUSER[0] in module axis_infrastructure_v1_1_1_util_axis2vector is either unconnected or has no load
+INFO: [Synth 8-7129] Port s_axis_tuser[0] in module axis_dwidth_converter_v1_1_34_axis_dwidth_converter is either unconnected or has no load
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 1410.473 ; gain = 670.617
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 1410.473 ; gain = 670.617
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 1410.473 ; gain = 670.617
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.026 . Memory (MB): peak = 1410.473 ; gain = 0.000
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [c:/Users/Robert Stacy Lois II/Desktop/aes-256-gcm/wrapper2/top-level-test/top-level-test/top-level-test.gen/sources_1/ip/axis_downsizer/axis_downsizer_ooc.xdc] for cell 'inst'
+Finished Parsing XDC File [c:/Users/Robert Stacy Lois II/Desktop/aes-256-gcm/wrapper2/top-level-test/top-level-test/top-level-test.gen/sources_1/ip/axis_downsizer/axis_downsizer_ooc.xdc] for cell 'inst'
+Parsing XDC File [C:/Users/Robert Stacy Lois II/Desktop/aes-256-gcm/wrapper2/top-level-test/top-level-test/top-level-test.runs/axis_downsizer_synth_1/dont_touch.xdc]
+Finished Parsing XDC File [C:/Users/Robert Stacy Lois II/Desktop/aes-256-gcm/wrapper2/top-level-test/top-level-test/top-level-test.runs/axis_downsizer_synth_1/dont_touch.xdc]
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1485.559 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.043 . Memory (MB): peak = 1485.559 ; gain = 0.000
+INFO: [Designutils 20-5008] Incremental synthesis strategy off
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:18 ; elapsed = 00:00:19 . Memory (MB): peak = 1485.559 ; gain = 745.703
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7a100tcsg324-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:18 ; elapsed = 00:00:19 . Memory (MB): peak = 1485.559 ; gain = 745.703
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:18 ; elapsed = 00:00:19 . Memory (MB): peak = 1485.559 ; gain = 745.703
+---------------------------------------------------------------------------------
+INFO: [Synth 8-4490] FSM extraction disabled for register 'state_reg' through user attribute
+INFO: [Synth 8-4490] FSM extraction disabled for register 'state_reg' through user attribute
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:18 ; elapsed = 00:00:19 . Memory (MB): peak = 1485.559 ; gain = 745.703
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input    4 Bit       Adders := 1     
++---Registers : 
+	              128 Bit    Registers := 1     
+	               16 Bit    Registers := 4     
+	                8 Bit    Registers := 1     
+	                4 Bit    Registers := 2     
+	                3 Bit    Registers := 1     
+	                1 Bit    Registers := 12    
++---Muxes : 
+	   4 Input    3 Bit        Muxes := 1     
+	   2 Input    3 Bit        Muxes := 1     
+	   2 Input    2 Bit        Muxes := 1     
+	   3 Input    2 Bit        Muxes := 1     
+	   2 Input    1 Bit        Muxes := 4     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 240 (col length:80)
+BRAMs: 270 (col length: RAMB18 80 RAMB36 40)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+INFO: [Synth 8-7129] Port s_axis_tstrb[15] in module axis_dwidth_converter_v1_1_34_axis_dwidth_converter is either unconnected or has no load
+INFO: [Synth 8-7129] Port s_axis_tstrb[14] in module axis_dwidth_converter_v1_1_34_axis_dwidth_converter is either unconnected or has no load
+INFO: [Synth 8-7129] Port s_axis_tstrb[13] in module axis_dwidth_converter_v1_1_34_axis_dwidth_converter is either unconnected or has no load
+INFO: [Synth 8-7129] Port s_axis_tstrb[12] in module axis_dwidth_converter_v1_1_34_axis_dwidth_converter is either unconnected or has no load
+INFO: [Synth 8-7129] Port s_axis_tstrb[11] in module axis_dwidth_converter_v1_1_34_axis_dwidth_converter is either unconnected or has no load
+INFO: [Synth 8-7129] Port s_axis_tstrb[10] in module axis_dwidth_converter_v1_1_34_axis_dwidth_converter is either unconnected or has no load
+INFO: [Synth 8-7129] Port s_axis_tstrb[9] in module axis_dwidth_converter_v1_1_34_axis_dwidth_converter is either unconnected or has no load
+INFO: [Synth 8-7129] Port s_axis_tstrb[8] in module axis_dwidth_converter_v1_1_34_axis_dwidth_converter is either unconnected or has no load
+INFO: [Synth 8-7129] Port s_axis_tstrb[7] in module axis_dwidth_converter_v1_1_34_axis_dwidth_converter is either unconnected or has no load
+INFO: [Synth 8-7129] Port s_axis_tstrb[6] in module axis_dwidth_converter_v1_1_34_axis_dwidth_converter is either unconnected or has no load
+INFO: [Synth 8-7129] Port s_axis_tstrb[5] in module axis_dwidth_converter_v1_1_34_axis_dwidth_converter is either unconnected or has no load
+INFO: [Synth 8-7129] Port s_axis_tstrb[4] in module axis_dwidth_converter_v1_1_34_axis_dwidth_converter is either unconnected or has no load
+INFO: [Synth 8-7129] Port s_axis_tstrb[3] in module axis_dwidth_converter_v1_1_34_axis_dwidth_converter is either unconnected or has no load
+INFO: [Synth 8-7129] Port s_axis_tstrb[2] in module axis_dwidth_converter_v1_1_34_axis_dwidth_converter is either unconnected or has no load
+INFO: [Synth 8-7129] Port s_axis_tstrb[1] in module axis_dwidth_converter_v1_1_34_axis_dwidth_converter is either unconnected or has no load
+INFO: [Synth 8-7129] Port s_axis_tstrb[0] in module axis_dwidth_converter_v1_1_34_axis_dwidth_converter is either unconnected or has no load
+INFO: [Synth 8-7129] Port s_axis_tid[0] in module axis_dwidth_converter_v1_1_34_axis_dwidth_converter is either unconnected or has no load
+INFO: [Synth 8-7129] Port s_axis_tdest[0] in module axis_dwidth_converter_v1_1_34_axis_dwidth_converter is either unconnected or has no load
+INFO: [Synth 8-7129] Port s_axis_tuser[0] in module axis_dwidth_converter_v1_1_34_axis_dwidth_converter is either unconnected or has no load
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:21 ; elapsed = 00:00:22 . Memory (MB): peak = 1485.559 ; gain = 745.703
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:27 ; elapsed = 00:00:29 . Memory (MB): peak = 1595.711 ; gain = 855.855
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:28 ; elapsed = 00:00:29 . Memory (MB): peak = 1634.418 ; gain = 894.562
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:28 ; elapsed = 00:00:30 . Memory (MB): peak = 1634.418 ; gain = 894.562
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:33 ; elapsed = 00:00:34 . Memory (MB): peak = 1858.227 ; gain = 1118.371
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:33 ; elapsed = 00:00:34 . Memory (MB): peak = 1858.227 ; gain = 1118.371
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:33 ; elapsed = 00:00:34 . Memory (MB): peak = 1858.227 ; gain = 1118.371
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:33 ; elapsed = 00:00:34 . Memory (MB): peak = 1858.227 ; gain = 1118.371
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:33 ; elapsed = 00:00:34 . Memory (MB): peak = 1858.227 ; gain = 1118.371
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:33 ; elapsed = 00:00:34 . Memory (MB): peak = 1858.227 ; gain = 1118.371
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+------+------+
+|      |Cell  |Count |
++------+------+------+
+|1     |LUT1  |    17|
+|2     |LUT2  |    10|
+|3     |LUT3  |     3|
+|4     |LUT4  |     6|
+|5     |LUT5  |     8|
+|6     |LUT6  |    88|
+|7     |MUXF7 |    36|
+|8     |MUXF8 |    18|
+|9     |FDRE  |   181|
+|10    |FDSE  |     1|
++------+------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:33 ; elapsed = 00:00:34 . Memory (MB): peak = 1858.227 ; gain = 1118.371
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 0 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:22 ; elapsed = 00:00:32 . Memory (MB): peak = 1858.227 ; gain = 1043.285
+Synthesis Optimization Complete : Time (s): cpu = 00:00:33 ; elapsed = 00:00:35 . Memory (MB): peak = 1858.227 ; gain = 1118.371
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.010 . Memory (MB): peak = 1858.227 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 54 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1860.461 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Synth Design complete | Checksum: e4b500dd
+INFO: [Common 17-83] Releasing license: Synthesis
+106 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+INFO: [Common 17-600] The following parameters have non-default value.
+tcl.statsThreshold
+Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 1860.461 ; gain = 0.000
+INFO: [Common 17-1381] The checkpoint 'C:/Users/Robert Stacy Lois II/Desktop/aes-256-gcm/wrapper2/top-level-test/top-level-test/top-level-test.runs/axis_downsizer_synth_1/axis_downsizer.dcp' has been generated.
+INFO: [Coretcl 2-1648] Added synthesis output to IP cache for IP axis_downsizer, cache-ID = 1fba82df0d343689
+INFO: [Coretcl 2-1174] Renamed 2 cell refs.
+Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 1860.461 ; gain = 0.000
+INFO: [Common 17-1381] The checkpoint 'C:/Users/Robert Stacy Lois II/Desktop/aes-256-gcm/wrapper2/top-level-test/top-level-test/top-level-test.runs/axis_downsizer_synth_1/axis_downsizer.dcp' has been generated.
+INFO: [Vivado 12-24828] Executing command : report_utilization -file axis_downsizer_utilization_synth.rpt -pb axis_downsizer_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Thu Apr  2 14:32:46 2026...

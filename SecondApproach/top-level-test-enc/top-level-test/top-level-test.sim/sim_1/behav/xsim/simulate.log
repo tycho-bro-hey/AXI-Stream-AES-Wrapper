@@ -1,0 +1,30 @@
+Time resolution is 1 ps
+
+tb_aes_gcm_256_axis_top, stage 6 system verification
+
+test 1: nist tc14 - single block, default key/iv
+
+tb_aes_gcm_256_axis_top, stage 6 system verification
+
+test 1: nist tc14 - single block, default key/iv
+    PASS: header len=44
+    PASS: 44 bytes output
+    PASS: tlast on byte 43
+    test 1 complete
+
+test 2: nist tc15 - 4 blocks, loaded key/iv
+    PASS: header len=92
+    PASS: 92 bytes output
+    PASS: tlast on byte 91
+    test 2 complete
+
+test 3: iv auto-increment verification
+    PASS: header len=44
+    PASS: 44 bytes output
+    PASS: tlast on byte 43
+    test 3 complete
+
+summary: 157 passed, 0 failed out of 157 tests
+ALL TESTS PASSED
+
+$finish called at time : 17466 ns : File "C:/Users/Robert Stacy Lois II/Desktop/aes-256-gcm/wrapper2/top-level-test/top-level-test/top-level-test.srcs/sim_1/imports/top-level-test/tb_aes_gcm_256_axis_top.v" Line 733

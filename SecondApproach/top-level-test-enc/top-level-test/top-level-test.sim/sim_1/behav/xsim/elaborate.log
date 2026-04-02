@@ -1,0 +1,45 @@
+Vivado Simulator v2025.2
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+Running: C:/AMDDesignTools/2025.2/Vivado/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L axis_infrastructure_v1_1_1 -L axis_register_slice_v1_1_35 -L axis_dwidth_converter_v1_1_34 -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_aes_gcm_256_axis_top_behav xil_defaultlib.tb_aes_gcm_256_axis_top xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.key_loader
+Compiling module xil_defaultlib.iv_loader
+Compiling module axis_infrastructure_v1_1_1.axis_infrastructure_v1_1_1_util_...
+Compiling module axis_register_slice_v1_1_35.axis_register_slice_v1_1_35_axis...
+Compiling module axis_infrastructure_v1_1_1.axis_infrastructure_v1_1_1_util_...
+Compiling module axis_register_slice_v1_1_35.axis_register_slice_v1_1_35_axis...
+Compiling module axis_dwidth_converter_v1_1_34.axis_dwidth_converter_v1_1_34_ax...
+Compiling module axis_infrastructure_v1_1_1.axis_infrastructure_v1_1_1_util_...
+Compiling module axis_register_slice_v1_1_35.axis_register_slice_v1_1_35_axis...
+Compiling module axis_infrastructure_v1_1_1.axis_infrastructure_v1_1_1_util_...
+Compiling module axis_register_slice_v1_1_35.axis_register_slice_v1_1_35_axis...
+Compiling module axis_dwidth_converter_v1_1_34.axis_dwidth_converter_v1_1_34_ax...
+Compiling module xil_defaultlib.axis_upsizer
+Compiling module xil_defaultlib.gfMult
+Compiling module xil_defaultlib.gfInverse
+Compiling module unisims_ver.LUT6_2
+Compiling module xil_defaultlib.subByte
+Compiling module xil_defaultlib.mixColumn
+Compiling module xil_defaultlib.aesRound
+Compiling module xil_defaultlib.aes256KeySchedule
+Compiling module xil_defaultlib.aes256
+Compiling module xil_defaultlib.gf128_mult
+Compiling module xil_defaultlib.ghash
+Compiling module xil_defaultlib.aes_gcm_256
+Compiling module xil_defaultlib.aes_gcm_core_adapter
+Compiling module axis_dwidth_converter_v1_1_34.axis_dwidth_converter_v1_1_34_ax...
+Compiling module axis_dwidth_converter_v1_1_34.axis_dwidth_converter_v1_1_34_ax...
+Compiling module xil_defaultlib.axis_downsizer
+Compiling module xil_defaultlib.tx_stream_composer
+Compiling module xil_defaultlib.tx_header_bridge
+Compiling module xil_defaultlib.aes_gcm_256_axis_top
+Compiling module xil_defaultlib.tb_aes_gcm_256_axis_top
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot tb_aes_gcm_256_axis_top_behav

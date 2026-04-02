@@ -1,0 +1,60 @@
+Time resolution is 1 ps
+
+tb_key_iv_loaders, stage 4 verification
+
+test 1: key power-up default
+    PASS: default key = 0
+
+test 2: load 32-byte key
+    PASS: key loaded correctly
+    PASS: no error
+
+test 3: key commit waits for enc-busy
+    PASS: key held during encBusy
+    PASS: key committed after encBusy dropped
+
+test 4: key early tlast (error)
+
+tb_key_iv_loaders, stage 4 verification
+
+test 1: key power-up default
+    PASS: default key = 0
+
+test 2: load 32-byte key
+    PASS: key loaded correctly
+    PASS: no error
+
+test 3: key commit waits for enc-busy
+    PASS: key held during encBusy
+    PASS: key committed after encBusy dropped
+
+test 4: key early tlast (error)
+    PASS: error flagged for early tlast
+    PASS: key unchanged after error
+
+test 5: key late tlast (error)
+    PASS: error flagged for missing tlast
+
+test 6: iv power-up default
+    PASS: default iv = 0
+
+test 7: load 12-byte iv
+    PASS: iv loaded correctly
+
+test 8: iv auto-increment
+    PASS: iv after 1 increment
+    PASS: iv after 3 total increments
+    PASS: upper 32 bits unchanged
+
+test 9: load new iv seed then auto-increment
+    PASS: new seed loaded
+    PASS: increment from new seed
+
+test 10: iv early tlast (error)
+    PASS: error flagged for early tlast
+    PASS: iv unchanged after error
+
+summary: 17 passed, 0 failed out of 17 tests
+ALL TESTS PASSED
+
+$finish called at time : 2326 ns : File "C:/Users/Robert Stacy Lois II/Desktop/aes-256-gcm/wrapper2/loader-test/loader-test/loader-test.srcs/sim_1/imports/loader-test/tb_key_iv_loaders.v" Line 531
