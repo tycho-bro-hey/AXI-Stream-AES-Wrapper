@@ -1,0 +1,26 @@
+Vivado Simulator v2025.2
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+Running: C:/AMDDesignTools/2025.2/Vivado/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_aes_gcm_core_adapter_behav xil_defaultlib.tb_aes_gcm_core_adapter xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.gfMult
+Compiling module xil_defaultlib.gfInverse
+Compiling module unisims_ver.LUT6_2
+Compiling module xil_defaultlib.subByte
+Compiling module xil_defaultlib.mixColumn
+Compiling module xil_defaultlib.aesRound
+Compiling module xil_defaultlib.aes256KeySchedule
+Compiling module xil_defaultlib.aes256
+Compiling module xil_defaultlib.gf128_mult
+Compiling module xil_defaultlib.ghash
+Compiling module xil_defaultlib.aes_gcm_256
+Compiling module xil_defaultlib.aes_gcm_core_adapter
+Compiling module xil_defaultlib.tb_aes_gcm_core_adapter
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot tb_aes_gcm_core_adapter_behav

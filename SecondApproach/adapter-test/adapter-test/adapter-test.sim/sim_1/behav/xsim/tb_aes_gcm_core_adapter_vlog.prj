@@ -1,0 +1,20 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  --include "../../../../../../../../../../../AMDDesignTools/2025.2/Vivado/data/rsb/busdef" \
+"../../../../adapter-test.srcs/sources_1/imports/aes/aes256.v" \
+"../../../../adapter-test.srcs/sources_1/imports/aes/aesKeySchedule.v" \
+"../../../../adapter-test.srcs/sources_1/imports/aes/aesRound_comb.v" \
+"../../../../adapter-test.srcs/sources_1/imports/gcm/aes_gcm_256.v" \
+"../../../../adapter-test.srcs/sources_1/imports/adapter-test/aes_gcm_core_adapter.v" \
+"../../../../adapter-test.srcs/sources_1/imports/gcm/gf128_mult.v" \
+"../../../../adapter-test.srcs/sources_1/imports/aes/gfInverse_canright.v" \
+"../../../../adapter-test.srcs/sources_1/imports/aes/gfMult.v" \
+"../../../../adapter-test.srcs/sources_1/imports/gcm/ghash.v" \
+"../../../../adapter-test.srcs/sources_1/imports/aes/mixColumn.v" \
+"../../../../adapter-test.srcs/sources_1/imports/aes/subByte.v" \
+"../../../../adapter-test.srcs/sim_1/imports/adapter-test/tb_aes_gcm_core_adapter.v" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

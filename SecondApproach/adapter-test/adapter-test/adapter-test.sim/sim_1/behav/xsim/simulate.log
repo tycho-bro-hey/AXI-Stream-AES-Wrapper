@@ -1,0 +1,59 @@
+Time resolution is 1 ps
+
+tb_aes_gcm_core_adapter, stage 1 verification
+
+test 1: mcgrew-viega tc14, single 16-byte block
+    CT[0] = cea7403d4d606b6e074ec5d3baf39d18  (tlast=1, tkeep=ffff)
+
+tb_aes_gcm_core_adapter, stage 1 verification
+
+test 1: mcgrew-viega tc14, single 16-byte block
+    CT[0] = cea7403d4d606b6e074ec5d3baf39d18  (tlast=1, tkeep=ffff)
+    PASS: ct block 0
+    PASS: TC14 Tag
+    PASS: received exactly 1 ct block
+
+test 2: mcgrew-viega tc15, four 16-byte blocks (64 bytes)
+    CT[0] = 522dc1f099567d07f47f37a32a84427d  (tlast=0, tkeep=ffff)
+    CT[1] = 643a8cdcbfe5c0c97598a2bd2555d1aa  (tlast=0, tkeep=ffff)
+    CT[2] = 8cb08e48590dbb3da7b08b1056828838  (tlast=0, tkeep=ffff)
+    CT[3] = c5f61e6393ba7a0abcc9f662898015ad  (tlast=1, tkeep=ffff)
+    PASS: ct block 0
+    PASS: ct block 1
+    PASS: ct block 2
+    PASS: ct block 3
+    PASS: TC15 Tag
+    PASS: received exactly 4 ct blocks
+
+test 3: partial final block, 60 bytes (12-byte last)
+    CT[0] = 522dc1f099567d07f47f37a32a84427d  (tlast=0, tkeep=ffff)
+    CT[1] = 643a8cdcbfe5c0c97598a2bd2555d1aa  (tlast=0, tkeep=ffff)
+    CT[2] = 8cb08e48590dbb3da7b08b1056828838  (tlast=0, tkeep=ffff)
+    CT[3] = c5f61e6393ba7a0abcc9f66200000000  (tlast=1, tkeep=fff0)
+    PASS: ct block 0
+    PASS: ct block 1
+    PASS: ct block 2
+    PASS: ct block 3 (12 bytes)
+    PASS: received exactly 4 ct blocks
+    tag (60b no-aad): eb9f796c8d356fc31a8433884b696f4f
+
+test 4: single-byte plaintext
+    CT[0] = 65000000000000000000000000000000  (tlast=1, tkeep=8000)
+    PASS: received exactly 1 ct block
+    info: ct block 0 = 65000000000000000000000000000000
+    info: tag        = c8f400b104ad8a1311c7d6f543ec66ba
+    PASS: single-byte operation completed
+
+test 5: back-to-back tc14 operations
+    CT[0] = cea7403d4d606b6e074ec5d3baf39d18  (tlast=1, tkeep=ffff)
+    PASS: ct block 0
+    PASS: TC14 Tag (1st)
+    starting second operation (no reset)
+    CT[0] = cea7403d4d606b6e074ec5d3baf39d18  (tlast=1, tkeep=ffff)
+    PASS: ct block 0
+    PASS: TC14 Tag (2nd)
+
+summary: 20 passed, 0 failed out of 20 tests
+ALL TESTS PASSED
+
+$finish called at time : 30055 ns : File "C:/Users/Robert Stacy Lois II/Desktop/aes-256-gcm/wrapper2/adapter-test/adapter-test/adapter-test.srcs/sim_1/imports/adapter-test/tb_aes_gcm_core_adapter.v" Line 465
