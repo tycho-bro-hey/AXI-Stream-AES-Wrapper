@@ -1,0 +1,46 @@
+Time resolution is 1 ps
+
+tb_rx_stream_parser, stage d1 verification
+
+test 1: nist tc14 packet (44 bytes)
+    PASS: iv extracted
+    PASS: tag extracted
+    PASS: 16 ct bytes
+    PASS: tlast on ct byte 15
+    test 1 complete
+
+test 2: nist tc15 packet (92 bytes)
+
+tb_rx_stream_parser, stage d1 verification
+
+test 1: nist tc14 packet (44 bytes)
+    PASS: iv extracted
+    PASS: tag extracted
+    PASS: 16 ct bytes
+    PASS: tlast on ct byte 15
+    test 1 complete
+
+test 2: nist tc15 packet (92 bytes)
+    PASS: iv extracted
+    PASS: tag extracted
+    PASS: 64 ct bytes
+    PASS: tlast on ct byte 63
+    test 2 complete
+
+test 3: tc14 with backpressure
+    PASS: iv with backpressure
+    PASS: 16 ct bytes with backpressure
+    PASS: tag with backpressure
+    test 3 complete
+
+test 4: back-to-back packets
+    PASS: packet 1 complete
+    PASS: packet 2 iv
+    PASS: packet 2 tag
+    PASS: packet 2 ct bytes
+    test 4 complete
+
+summary: 111 passed, 0 failed out of 111 tests
+ALL TESTS PASSED
+
+$finish called at time : 3856 ns : File "C:/Users/Robert Stacy Lois II/Desktop/aes-256-gcm/wrapper2/receiver/parser-test/parser-test/parser-test.srcs/sim_1/imports/parser-test/tb_rx_stream_parser.v" Line 531

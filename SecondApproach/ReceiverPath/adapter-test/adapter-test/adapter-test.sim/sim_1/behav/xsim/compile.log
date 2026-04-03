@@ -1,0 +1,27 @@
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Robert Stacy Lois II/Desktop/aes-256-gcm/wrapper2/receiver/adapter-test/adapter-test/adapter-test.srcs/sources_1/imports/aes/aes256.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module aes256
+INFO: [VRFC 10-311] analyzing module aes256_tb
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Robert Stacy Lois II/Desktop/aes-256-gcm/wrapper2/receiver/adapter-test/adapter-test/adapter-test.srcs/sources_1/imports/aes/aesKeySchedule.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module aes256KeySchedule
+INFO: [VRFC 10-311] analyzing module keySchedule_tb
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Robert Stacy Lois II/Desktop/aes-256-gcm/wrapper2/receiver/adapter-test/adapter-test/adapter-test.srcs/sources_1/imports/aes/aesRound_comb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module aesRound
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Robert Stacy Lois II/Desktop/aes-256-gcm/wrapper2/receiver/adapter-test/adapter-test/adapter-test.srcs/sources_1/imports/gcm/aes_gcm_256.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module aes_gcm_256
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Robert Stacy Lois II/Desktop/aes-256-gcm/wrapper2/receiver/adapter-test/adapter-test/adapter-test.srcs/sources_1/imports/adapter-test/aes_gcm_core_adapter.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module aes_gcm_core_adapter
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Robert Stacy Lois II/Desktop/aes-256-gcm/wrapper2/receiver/adapter-test/adapter-test/adapter-test.srcs/sources_1/imports/gcm/gf128_mult.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module gf128_mult
+INFO: [VRFC 10-311] analyzing module gf128_mult_comb
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Robert Stacy Lois II/Desktop/aes-256-gcm/wrapper2/receiver/adapter-test/adapter-test/adapter-test.srcs/sources_1/imports/aes/gfInverse_canright.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module gfInverse
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Robert Stacy Lois II/Desktop/aes-256-gcm/wrapper2/receiver/adapter-test/adapter-test/adapter-test.srcs/sources_1/imports/aes/gfMult.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module gfMult
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Robert Stacy Lois II/Desktop/aes-256-gcm/wrapper2/receiver/adapter-test/adapter-test/adapter-test.srcs/sources_1/imports/gcm/ghash.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ghash
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Robert Stacy Lois II/Desktop/aes-256-gcm/wrapper2/receiver/adapter-test/adapter-test/adapter-test.srcs/sources_1/imports/aes/mixColumn.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mixColumn
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Robert Stacy Lois II/Desktop/aes-256-gcm/wrapper2/receiver/adapter-test/adapter-test/adapter-test.srcs/sources_1/imports/aes/subByte.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module subByte
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Robert Stacy Lois II/Desktop/aes-256-gcm/wrapper2/receiver/adapter-test/adapter-test/adapter-test.srcs/sim_1/imports/adapter-test/tb_aes_gcm_core_adapter_decrypt.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb_aes_gcm_core_adapter_decrypt

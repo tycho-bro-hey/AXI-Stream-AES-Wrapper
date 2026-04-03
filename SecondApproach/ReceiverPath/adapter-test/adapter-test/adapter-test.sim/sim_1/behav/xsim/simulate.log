@@ -1,0 +1,35 @@
+Time resolution is 1 ps
+
+tb_aes_gcm_core_adapter_decrypt, stage d2 verification
+
+test 1: encrypt regression (nist tc14)
+
+tb_aes_gcm_core_adapter_decrypt, stage d2 verification
+
+test 1: encrypt regression (nist tc14)
+    PASS: ct matches nist tc14
+    PASS: tag matches nist tc14
+    test 1 complete
+
+test 2: decrypt nist tc14 (single block)
+    PASS: pt = 0 (correct)
+    PASS: tag authenticated
+    test 2 complete
+
+test 3: decrypt nist tc15 (4 blocks)
+    PASS: 4 output blocks
+    PASS: pt block 0
+    PASS: pt block 1
+    PASS: pt block 2
+    PASS: pt block 3
+    PASS: tag authenticated
+    test 3 complete
+
+test 4: decrypt with corrupted tag
+    PASS: auth failure detected
+    test 4 complete
+
+summary: 11 passed, 0 failed out of 11 tests
+ALL TESTS PASSED
+
+$finish called at time : 19036 ns : File "C:/Users/Robert Stacy Lois II/Desktop/aes-256-gcm/wrapper2/receiver/adapter-test/adapter-test/adapter-test.srcs/sim_1/imports/adapter-test/tb_aes_gcm_core_adapter_decrypt.v" Line 399
