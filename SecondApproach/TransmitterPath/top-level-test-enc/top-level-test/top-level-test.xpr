@@ -4,7 +4,7 @@
 <!-- Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.                   -->
 <!-- Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.   -->
 
-<Project Product="Vivado" Version="7" Minor="71" Path="C:/Users/Robert Stacy Lois II/Desktop/aes-256-gcm/wrapper2/top-level-test/top-level-test/top-level-test.xpr">
+<Project Product="Vivado" Version="7" Minor="71" Path="C:/Users/Robert Stacy Lois II/Desktop/aes-256-gcm/wrapper2/transmitter/top-level-test-enc/top-level-test/top-level-test.xpr">
   <DefaultLaunch Dir="$PRUNDIR"/>
   <Configuration>
     <Option Name="Id" Val="971874d86e764062a71b76f56ae9ec9e"/>
@@ -58,7 +58,7 @@
     <Option Name="IPUserFilesDir" Val="$PIPUSERFILESDIR"/>
     <Option Name="IPStaticSourceDir" Val="$PIPUSERFILESDIR/ipstatic"/>
     <Option Name="EnableBDX" Val="FALSE"/>
-    <Option Name="WTXSimLaunchSim" Val="3"/>
+    <Option Name="WTXSimLaunchSim" Val="7"/>
     <Option Name="WTModelSimLaunchSim" Val="0"/>
     <Option Name="WTQuestaLaunchSim" Val="0"/>
     <Option Name="WTIesLaunchSim" Val="0"/>
@@ -125,10 +125,10 @@
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PSRCDIR/sources_1/imports/top-level-test/aes_gcm_core_adapter.v">
+      <File Path="$PSRCDIR/sources_1/imports/adapter-test/aes_gcm_core_adapter.v">
         <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../aes_gcm_core_adapter.v"/>
-          <Attr Name="ImportTime" Val="1775155691"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/../../../receiver/adapter-test/aes_gcm_core_adapter.v"/>
+          <Attr Name="ImportTime" Val="1775223491"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
@@ -224,10 +224,10 @@
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PSRCDIR/sources_1/imports/top-level-test/aes_gcm_256_axis_top.v">
+      <File Path="$PSRCDIR/sources_1/imports/top-level-test-enc/aes_gcm_256_axis_top.v">
         <FileInfo>
           <Attr Name="ImportPath" Val="$PPRDIR/../aes_gcm_256_axis_top.v"/>
-          <Attr Name="ImportTime" Val="1775156177"/>
+          <Attr Name="ImportTime" Val="1775227507"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
@@ -344,9 +344,7 @@
     </Run>
     <Run Id="axis_upsizer_synth_1" Type="Ft3:Synth" SrcSet="axis_upsizer" Part="xc7a100tcsg324-1" ConstrsSet="axis_upsizer" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/axis_upsizer_synth_1" IncludeInArchive="true" IsChild="false" AutoIncrementalDir="$PSRCDIR/utils_1/imports/axis_upsizer_synth_1" AutoRQSDir="$PSRCDIR/utils_1/imports/axis_upsizer_synth_1" ParallelReportGen="true">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2025">
-          <Desc>Vivado Synthesis Defaults</Desc>
-        </StratHandle>
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2025"/>
         <Step Id="synth_design"/>
       </Strategy>
       <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
@@ -356,9 +354,7 @@
     </Run>
     <Run Id="axis_downsizer_synth_1" Type="Ft3:Synth" SrcSet="axis_downsizer" Part="xc7a100tcsg324-1" ConstrsSet="axis_downsizer" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/axis_downsizer_synth_1" IncludeInArchive="true" IsChild="false" AutoIncrementalDir="$PSRCDIR/utils_1/imports/axis_downsizer_synth_1" AutoRQSDir="$PSRCDIR/utils_1/imports/axis_downsizer_synth_1" ParallelReportGen="true">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2025">
-          <Desc>Vivado Synthesis Defaults</Desc>
-        </StratHandle>
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2025"/>
         <Step Id="synth_design"/>
       </Strategy>
       <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
@@ -385,9 +381,7 @@
     </Run>
     <Run Id="axis_upsizer_impl_1" Type="Ft2:EntireDesign" Part="xc7a100tcsg324-1" ConstrsSet="axis_upsizer" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="axis_upsizer_synth_1" IncludeInArchive="false" IsChild="false" GenFullBitstream="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/axis_upsizer_impl_1" AutoRQSDir="$PSRCDIR/utils_1/imports/axis_upsizer_impl_1" ParallelReportGen="true">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2025">
-          <Desc>Default settings for Implementation.</Desc>
-        </StratHandle>
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2025"/>
         <Step Id="init_design"/>
         <Step Id="opt_design"/>
         <Step Id="power_opt_design"/>
@@ -404,9 +398,7 @@
     </Run>
     <Run Id="axis_downsizer_impl_1" Type="Ft2:EntireDesign" Part="xc7a100tcsg324-1" ConstrsSet="axis_downsizer" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="axis_downsizer_synth_1" IncludeInArchive="false" IsChild="false" GenFullBitstream="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/axis_downsizer_impl_1" AutoRQSDir="$PSRCDIR/utils_1/imports/axis_downsizer_impl_1" ParallelReportGen="true">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2025">
-          <Desc>Default settings for Implementation.</Desc>
-        </StratHandle>
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2025"/>
         <Step Id="init_design"/>
         <Step Id="opt_design"/>
         <Step Id="power_opt_design"/>

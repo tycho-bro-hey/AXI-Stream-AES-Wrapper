@@ -27,4 +27,4 @@ test 3: iv auto-increment verification
 summary: 157 passed, 0 failed out of 157 tests
 ALL TESTS PASSED
 
-$finish called at time : 17466 ns : File "C:/Users/Robert Stacy Lois II/Desktop/aes-256-gcm/wrapper2/top-level-test/top-level-test/top-level-test.srcs/sim_1/imports/top-level-test/tb_aes_gcm_256_axis_top.v" Line 733
+$finish called at time : 17466 ns : File "C:/Users/Robert Stacy Lois II/Desktop/aes-256-gcm/wrapper2/transmitter/top-level-test-enc/top-level-test/top-level-test.srcs/sim_1/imports/top-level-test/tb_aes_gcm_256_axis_top.v" Line 733

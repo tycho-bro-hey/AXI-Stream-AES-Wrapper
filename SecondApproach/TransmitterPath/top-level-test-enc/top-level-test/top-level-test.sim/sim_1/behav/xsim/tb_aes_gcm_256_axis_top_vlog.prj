@@ -1,13 +1,13 @@
 # compile verilog/system verilog design source files
-verilog xil_defaultlib  --include "../../../../../../../../../../../AMDDesignTools/2025.2/Vivado/data/rsb/busdef" --include "../../../../top-level-test.ip_user_files/ipstatic/hdl" \
+verilog xil_defaultlib  --include "../../../../../../../../../../../../AMDDesignTools/2025.2/Vivado/data/rsb/busdef" --include "../../../../top-level-test.ip_user_files/ipstatic/hdl" \
 "../../../../top-level-test.gen/sources_1/ip/axis_downsizer/sim/axis_downsizer.v" \
 "../../../../top-level-test.gen/sources_1/ip/axis_upsizer/sim/axis_upsizer.v" \
 "../../../../top-level-test.srcs/sources_1/imports/aes/aes256.v" \
 "../../../../top-level-test.srcs/sources_1/imports/aes/aesKeySchedule.v" \
 "../../../../top-level-test.srcs/sources_1/imports/aes/aesRound_comb.v" \
 "../../../../top-level-test.srcs/sources_1/imports/gcm/aes_gcm_256.v" \
-"../../../../top-level-test.srcs/sources_1/imports/top-level-test/aes_gcm_256_axis_top.v" \
-"../../../../top-level-test.srcs/sources_1/imports/top-level-test/aes_gcm_core_adapter.v" \
+"../../../../top-level-test.srcs/sources_1/imports/top-level-test-enc/aes_gcm_256_axis_top.v" \
+"../../../../top-level-test.srcs/sources_1/imports/adapter-test/aes_gcm_core_adapter.v" \
 "../../../../top-level-test.srcs/sources_1/imports/gcm/gf128_mult.v" \
 "../../../../top-level-test.srcs/sources_1/imports/aes/gfInverse_canright.v" \
 "../../../../top-level-test.srcs/sources_1/imports/aes/gfMult.v" \

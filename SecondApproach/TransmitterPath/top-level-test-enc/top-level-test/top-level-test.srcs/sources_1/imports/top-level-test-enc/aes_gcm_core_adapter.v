@@ -4,15 +4,9 @@
 // project: aes-gcm-256 for arty a7-100t
 //
 // wraps the aes_gcm_256 core with axi-stream interfaces. accepts 128-bit
-// data blocks via axi-stream slave, drives the core's handshake protocol,
-// outputs 128-bit result blocks via axi-stream master. tag on sideband
-// output. supports both encrypt (mode=0) and decrypt (mode=1).
-// no aad path.
-//
-// in encrypt mode: slave=plaintext, master=ciphertext
-// in decrypt mode: slave=ciphertext, master=plaintext
-//   tag_in must be valid before the first block arrives.
-//   tag_match/auth_fail are valid after tag_valid pulses.
+// plaintext blocks via axi-stream slave, drives the core's handshake
+// protocol, outputs 128-bit ciphertext via axi-stream master. tag on
+// sideband output. encrypt-only (mode=0), no aad path.
 //
 // uses fixed-delay timing per project context section 2.
 //
@@ -23,16 +17,14 @@ module aes_gcm_core_adapter (
     input wire clk,
     input wire rst,
 
-    // axi-stream slave, data input (128-bit)
-    // encrypt: plaintext in. decrypt: ciphertext in.
+    // axi-stream slave, plaintext input (128-bit)
     input wire [127:0] s_axis_tdata,
     input wire s_axis_tvalid,
     output reg s_axis_tready,
     input wire s_axis_tlast,
     input wire [15:0] s_axis_tkeep,
 
-    // axi-stream master, data output (128-bit)
-    // encrypt: ciphertext out. decrypt: plaintext out.
+    // axi-stream master, ciphertext output (128-bit)
     output reg [127:0] m_axis_tdata,
     output reg m_axis_tvalid,
     input wire m_axis_tready,
@@ -43,19 +35,9 @@ module aes_gcm_core_adapter (
     input wire [255:0] key,
     input wire [95:0] iv,
 
-    // mode: 0 = encrypt, 1 = decrypt
-    input wire mode,
-
-    // decrypt tag input (must be stable before first block)
-    input wire [127:0] tagIn,
-
     // tag output (sideband, read by tx_stream_composer)
     output reg [127:0] tagOut,
     output reg tagValid,
-
-    // decrypt verification (valid after tag_valid)
-    output reg tagMatch,
-    output reg authFail,
 
     // status
     output wire encBusy
@@ -74,8 +56,8 @@ module aes_gcm_core_adapter (
     localparam STATE_OUTPUT_TAG = 4'd9;
 
     // timing constants
-    localparam INIT_WAIT_CYCLES = 8'd25;
-    localparam BLOCK_WAIT_CYCLES = 8'd160;
+    localparam INIT_WAIT_CYCLES = 8'd25; // h computation + ghash init + margin
+    localparam BLOCK_WAIT_CYCLES = 8'd160; // aes + ghash per block + margin
 
     reg [3:0] state;
     reg [7:0] waitCounter;
@@ -85,11 +67,7 @@ module aes_gcm_core_adapter (
     reg lastReg;
     reg [15:0] keepReg;
 
-    // latched mode and tag for decrypt
-    reg modeReg;
-    reg [127:0] tagInReg;
-
-    // captured output from core
+    // captured ciphertext from core
     reg [127:0] ctReg;
     reg [15:0] ctKeepReg;
 
@@ -106,8 +84,6 @@ module aes_gcm_core_adapter (
     wire [127:0] coreCtOut;
     wire coreCtValid;
     wire [127:0] coreTag;
-    wire coreTagMatch;
-    wire coreAuthFail;
 
     assign encBusy = (state != STATE_IDLE);
 
@@ -128,12 +104,12 @@ module aes_gcm_core_adapter (
         .clk(clk),
         .rst(rst),
         .start(coreStart),
-        .mode(modeReg),
+        .mode(1'b0), // encrypt only
         .busy(coreBusy),
         .done(coreDone),
         .key(key),
         .iv(iv),
-        .aad_in(128'd0),
+        .aad_in(128'd0), // no aad
         .aad_valid(1'b0),
         .aad_len(5'd0),
         .aad_last(1'b0),
@@ -145,9 +121,9 @@ module aes_gcm_core_adapter (
         .ct_out(coreCtOut),
         .ct_valid(coreCtValid),
         .tag(coreTag),
-        .tag_in(tagInReg),
-        .tag_match(coreTagMatch),
-        .auth_fail(coreAuthFail)
+        .tag_in(128'd0),
+        .tag_match(),
+        .auth_fail()
     );
 
     // main fsm
@@ -169,14 +145,10 @@ module aes_gcm_core_adapter (
             dataReg <= 128'd0;
             lastReg <= 1'b0;
             keepReg <= 16'd0;
-            modeReg <= 1'b0;
-            tagInReg <= 128'd0;
             ctReg <= 128'd0;
             ctKeepReg <= 16'd0;
             tagOut <= 128'd0;
             tagValid <= 1'b0;
-            tagMatch <= 1'b0;
-            authFail <= 1'b0;
         end
         else begin
             // deassert single-cycle pulses
@@ -185,7 +157,7 @@ module aes_gcm_core_adapter (
             coreFinalize <= 1'b0;
 
             case (state)
-                // wait for first data block
+                // wait for first plaintext block
                 STATE_IDLE: begin
                     tagValid <= 1'b0;
                     m_axis_tvalid <= 1'b0;
@@ -195,8 +167,6 @@ module aes_gcm_core_adapter (
                         dataReg <= s_axis_tdata;
                         lastReg <= s_axis_tlast;
                         keepReg <= s_axis_tkeep;
-                        modeReg <= mode;
-                        tagInReg <= tagIn;
                         s_axis_tready <= 1'b0;
                         state <= STATE_START_CORE;
                     end
@@ -237,7 +207,7 @@ module aes_gcm_core_adapter (
                     end
                 end
 
-                // present output block on axi-stream master
+                // present ciphertext on axi-stream master
                 STATE_OUTPUT_CT: begin
                     waitCounter <= waitCounter + 8'd1;
                     m_axis_tdata <= ctReg;
@@ -264,7 +234,7 @@ module aes_gcm_core_adapter (
                     end
                 end
 
-                // accept next data block
+                // accept next plaintext block
                 STATE_ACCEPT_NEXT: begin
                     s_axis_tready <= 1'b1;
                     if (s_axis_tvalid && s_axis_tready) begin
@@ -281,8 +251,6 @@ module aes_gcm_core_adapter (
                     if (coreDone) begin
                         tagOut <= coreTag;
                         tagValid <= 1'b1;
-                        tagMatch <= coreTagMatch;
-                        authFail <= coreAuthFail;
                         state <= STATE_OUTPUT_TAG;
                     end
                 end
