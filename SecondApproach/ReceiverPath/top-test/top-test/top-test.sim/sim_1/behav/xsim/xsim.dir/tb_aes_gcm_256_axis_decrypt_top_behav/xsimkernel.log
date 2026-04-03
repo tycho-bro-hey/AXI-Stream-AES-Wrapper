@@ -1,0 +1,4 @@
+Running: xsim.dir/tb_aes_gcm_256_axis_decrypt_top_behav/xsimk.exe -simmode gui -wdb tb_aes_gcm_256_axis_decrypt_top_behav.wdb -simrunnum 0 -socket 55411
+Design successfully loaded
+Design Loading Memory Usage: 12284 KB (Peak: 12284 KB)
+Design Loading CPU Usage: 30 ms

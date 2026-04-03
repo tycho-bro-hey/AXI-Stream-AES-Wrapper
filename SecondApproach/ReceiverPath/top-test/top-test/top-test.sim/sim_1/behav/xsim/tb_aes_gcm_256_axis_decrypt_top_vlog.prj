@@ -1,0 +1,27 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  --include "../../../../../../../../../../../../AMDDesignTools/2025.2/Vivado/data/rsb/busdef" --include "../../../../top-test.ip_user_files/ipstatic/hdl" \
+"../../../../top-test.gen/sources_1/ip/axis_pt_fifo/sim/axis_pt_fifo.v" \
+"../../../../top-test.gen/sources_1/ip/axis_downsizer/sim/axis_downsizer.v" \
+"../../../../top-test.gen/sources_1/ip/axis_upsizer/sim/axis_upsizer.v" \
+"../../../../top-test.srcs/sources_1/imports/aes/aes256.v" \
+"../../../../top-test.srcs/sources_1/imports/aes/aesKeySchedule.v" \
+"../../../../top-test.srcs/sources_1/imports/aes/aesRound_comb.v" \
+"../../../../top-test.srcs/sources_1/imports/gcm/aes_gcm_256.v" \
+"../../../../top-test.srcs/sources_1/imports/top-test/aes_gcm_256_axis_decrypt_top.v" \
+"../../../../top-test.srcs/sources_1/imports/top-test/aes_gcm_core_adapter.v" \
+"../../../../top-test.srcs/sources_1/imports/gcm/gf128_mult.v" \
+"../../../../top-test.srcs/sources_1/imports/aes/gfInverse_canright.v" \
+"../../../../top-test.srcs/sources_1/imports/aes/gfMult.v" \
+"../../../../top-test.srcs/sources_1/imports/gcm/ghash.v" \
+"../../../../top-test.srcs/sources_1/imports/top-test/key_loader.v" \
+"../../../../top-test.srcs/sources_1/imports/aes/mixColumn.v" \
+"../../../../top-test.srcs/sources_1/imports/top-test/rx_stream_parser.v" \
+"../../../../top-test.srcs/sources_1/imports/aes/subByte.v" \
+"../../../../top-test.srcs/sources_1/imports/top-test/tx_header_bridge.v" \
+"../../../../top-test.srcs/sim_1/imports/top-test/tb_aes_gcm_256_axis_decrypt_top.v" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

@@ -1,0 +1,26 @@
+#-----------------------------------------------------------
+# Vivado v2025.2 (64-bit)
+# SW Build 6299465 on Fri Nov 14 19:35:11 GMT 2025
+# IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
+# SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
+# Start of session at: Fri Apr  3 10:34:35 2026
+# Process ID         : 17312
+# Current directory  : c:/Users/Robert Stacy Lois II/Desktop/aes-256-gcm/wrapper2/receiver/top-test/axis_pt_fifo_ex
+# Command line       : vivado.exe -notrace -source c:/Users/Robert Stacy Lois II/Desktop/aes-256-gcm/wrapper2/receiver/top-test/top-test/top-test.gen/sources_1/ip/axis_pt_fifo/axis_pt_fifo_ex.tcl
+# Log file           : c:/Users/Robert Stacy Lois II/Desktop/aes-256-gcm/wrapper2/receiver/top-test/axis_pt_fifo_ex/vivado.log
+# Journal file       : c:/Users/Robert Stacy Lois II/Desktop/aes-256-gcm/wrapper2/receiver/top-test/axis_pt_fifo_ex\vivado.jou
+# Running On         : DESKTOP-E57OKA0
+# Platform           : Windows Server 2016 or Windows 10
+# Operating System   : 26200
+# Processor Detail   : AMD Ryzen 7 3700X 8-Core Processor             
+# CPU Frequency      : 3593 MHz
+# CPU Physical cores : 8
+# CPU Logical cores  : 16
+# Host memory        : 51444 MB
+# Swap memory        : 3221 MB
+# Total Virtual      : 54665 MB
+# Available Virtual  : 32477 MB
+#-----------------------------------------------------------
+start_gui
+source {c:/Users/Robert Stacy Lois II/Desktop/aes-256-gcm/wrapper2/receiver/top-test/top-test/top-test.gen/sources_1/ip/axis_pt_fifo/axis_pt_fifo_ex.tcl} -notrace
+update_compile_order -fileset sources_1

@@ -1,0 +1,1 @@
+vopt -l elaborate.log +acc=npr -suppress 10016  -L xil_defaultlib -L xpm -L axis_infrastructure_v1_1_1 -L axis_register_slice_v1_1_35 -L axis_dwidth_converter_v1_1_34 -L unisims_ver -L unimacro_ver -L secureip -work xil_defaultlib xil_defaultlib.tb_aes_gcm_256_axis_decrypt_top xil_defaultlib.glbl -o tb_aes_gcm_256_axis_decrypt_top_opt

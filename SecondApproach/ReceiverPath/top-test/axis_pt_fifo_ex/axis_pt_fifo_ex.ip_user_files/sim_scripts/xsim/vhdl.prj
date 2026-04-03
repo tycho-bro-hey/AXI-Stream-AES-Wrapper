@@ -1,0 +1,5 @@
+vhdl xil_defaultlib  \
+"../../../axis_pt_fifo_ex.gen/sources_1/ip/proc_sys_reset_0/sim/proc_sys_reset_0.vhd" \
+
+# Do not sort compile order
+nosort

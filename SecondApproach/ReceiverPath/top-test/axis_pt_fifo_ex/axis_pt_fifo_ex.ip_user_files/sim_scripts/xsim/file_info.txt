@@ -1,0 +1,9 @@
+axis_pt_fifo.v,verilog,xil_defaultlib,../../../axis_pt_fifo_ex.gen/sources_1/ip/axis_pt_fifo/sim/axis_pt_fifo.v,incdir="../../../../../../../../../../../AMDDesignTools/2025.2/Vivado/data/rsb/busdef"incdir="../../ipstatic/hdl"incdir="../../ipstatic"
+proc_sys_reset_0.vhd,vhdl,xil_defaultlib,../../../axis_pt_fifo_ex.gen/sources_1/ip/proc_sys_reset_0/sim/proc_sys_reset_0.vhd,incdir="../../../../../../../../../../../AMDDesignTools/2025.2/Vivado/data/rsb/busdef"incdir="../../ipstatic/hdl"incdir="../../ipstatic"
+clk_wiz_0_clk_wiz.v,verilog,xil_defaultlib,../../../axis_pt_fifo_ex.gen/sources_1/ip/clk_wiz_0/clk_wiz_0_clk_wiz.v,incdir="../../../../../../../../../../../AMDDesignTools/2025.2/Vivado/data/rsb/busdef"incdir="../../ipstatic/hdl"incdir="../../ipstatic"
+clk_wiz_0.v,verilog,xil_defaultlib,../../../axis_pt_fifo_ex.gen/sources_1/ip/clk_wiz_0/clk_wiz_0.v,incdir="../../../../../../../../../../../AMDDesignTools/2025.2/Vivado/data/rsb/busdef"incdir="../../ipstatic/hdl"incdir="../../ipstatic"
+axis_pt_fifo_example_master.v,verilog,xil_defaultlib,imports/axis_pt_fifo_example_master.v,incdir="../../../../../../../../../../../AMDDesignTools/2025.2/Vivado/data/rsb/busdef"incdir="../../ipstatic/hdl"incdir="../../ipstatic"
+axis_pt_fifo_example_slave.v,verilog,xil_defaultlib,imports/axis_pt_fifo_example_slave.v,incdir="../../../../../../../../../../../AMDDesignTools/2025.2/Vivado/data/rsb/busdef"incdir="../../ipstatic/hdl"incdir="../../ipstatic"
+exdes_top.v,verilog,xil_defaultlib,imports/exdes_top.v,incdir="../../../../../../../../../../../AMDDesignTools/2025.2/Vivado/data/rsb/busdef"incdir="../../ipstatic/hdl"incdir="../../ipstatic"
+exdes_tb.v,verilog,xil_defaultlib,imports/exdes_tb.v,incdir="../../../../../../../../../../../AMDDesignTools/2025.2/Vivado/data/rsb/busdef"incdir="../../ipstatic/hdl"incdir="../../ipstatic"
+glbl.v,Verilog,xil_defaultlib,glbl.v
